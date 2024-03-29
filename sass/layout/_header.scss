@@ -1,0 +1,46 @@
+@use "../base" as *;
+
+.header {
+  background-color: $black;
+  height: 3.125rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  &__items {
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+}

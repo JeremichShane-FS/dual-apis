@@ -1,0 +1,8 @@
+# Gitignore is for files that you don't want to commit to your repository
+# env is for environment variables that are used in your application
+# .env
+
+# node_modules is for the node modules directory that is created when you run npm install
+# node_modules
+
+# Since this repo is private and I don't have a reason to ignore any files, I'm not going to use a .gitignore file

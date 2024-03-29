@@ -1,0 +1,98 @@
+@use "variables" as *;
+
+.article {
+  background-color: $white;
+  margin: 2rem;
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: $blue;
+  }
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.scroll-cards {
+  counter-reset: card;
+  padding-bottom: 30vh;
+  position: relative;
+}
+
+.scroll-cards > .scroll-cards__item + .scroll-cards__item {
+  margin-top: 20vh;
+}
+
+.scroll-cards__item {
+  --offset: 0.5em;
+  color: $black;
+  position: sticky;
+  top: 8vh;
+  padding: 2em 1.5em;
+  min-height: 19em;
+  background: $white;
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 5 * var(--offset));
+
+  @for $i from 0 through 10 {
+    &:nth-of-type(#{$i}) {
+      transform: translate(
+        calc((#{$i} - 1) * var(--offset)),
+        calc((#{$i} - 1) * var(--offset))
+      );
+    }
+  }
+}
+
+h2 {
+  font-size: 1.25em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@media screen and (min-width: 37em) {
+  h1 {
+    font-size: 3em;
+  }
+  .scroll-cards__item {
+    --offset: 1em;
+    padding-left: 5em;
+  }
+  .scroll-cards__item:before {
+    counter-increment: card;
+    content: counter(card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75em;
+    height: 2.75em;
+    background: $pink;
+    color: $white;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 1.25em;
+    top: 1.25em;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .scroll-cards h1 {
+    font-size: 3em;
+  }
+  .scroll-cards__item {
+    --offset: 1.25rem;
+    max-width: 42rem;
+  }
+}

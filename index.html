@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/news.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Assignment: Working With APIs</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__items">
+      <a href="#">
+        <span class="header__logo">
+          <img src="img/news.png" alt="News Logo">
+          <h1 class="header__title">News App</h1>
+        </span>
+      </a>
+      <a href="#"><span id="profile" class="profile"></span></a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="user" id="user">
+      <h2>Currently Signed In As:</h2>
+      <div id="user-info">
+      </div>
+    </section>
+
+    <section class="news-section">
+      <ul id="news" class="news scroll-cards" aria-live="polite">
+        <li id="toggle" class="toggle">
+          <h1>Loading news items...</h1>
+        </li>
+
+
+
+
+      </ul>
+    </section>
+
+
+
+  </main>
+  <footer class="footer">
+    <p id="copyright"></p>
+  </footer>
+  <script src="js/app.js" type="module"></script>
+</body>
+
+</html>
